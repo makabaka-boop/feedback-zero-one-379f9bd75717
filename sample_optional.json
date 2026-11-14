@@ -1,0 +1,12 @@
+{
+  "triples": [
+    ["alice", "knows", "bob"],
+    ["bob", "knows", "carol"],
+    ["carol", "email", "carol@example.test"]
+  ],
+  "query": [
+    "optional",
+    ["scan", "?x", "knows", "?y"],
+    ["scan", "?y", "email", "?e"]
+  ]
+}
